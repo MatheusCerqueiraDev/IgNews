@@ -19,7 +19,7 @@ export function SubButton({priceId}:SubButtonProps){
         try{
             const response = await api.post('/subsSection')
 
-            const [sessionId] = response.data
+            const { sessionId } = response.data
             
             const stripe = await getStripeJs()
 
